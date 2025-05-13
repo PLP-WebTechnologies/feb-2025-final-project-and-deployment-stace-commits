@@ -1,0 +1,165 @@
+/* Theme Colors */
+:root {
+    --beige: #F5F5DC;
+    --chocolate-brown: #493627;
+    --banana-yellow: #FFE135;
+}
+
+/* Reset and General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--chocolate-brown);
+    background: var(--beige);
+}
+
+header {
+    background: var(--chocolate-brown);
+    padding: 1rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: var(--beige);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a.active {
+    color: var(--banana-yellow);
+}
+
+main {
+    padding: 2rem;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 1rem;
+    color: var(--chocolate-brown);
+}
+
+footer {
+    background: var(--chocolate-brown);
+    color: var(--beige);
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Slider Styles */
+.slider {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slides img {
+    width: 100%;
+    display: none;
+    border-radius: 8px;
+}
+
+.slides img.active {
+    display: block;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--chocolate-brown);
+    color: var(--beige);
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+/* About Page */
+.about-img {
+    max-width: 100%;
+    height: auto;
+    margin: 1rem 0;
+    border-radius: 8px;
+}
+
+/* Contact Form */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 0.5rem 0 0.2rem;
+    color: var(--chocolate-brown);
+}
+
+input, textarea {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--chocolate-brown);
+    border-radius: 4px;
+    background: var(--beige);
+}
+
+button {
+    padding: 0.7rem;
+    background: var(--banana-yellow);
+    color: var(--chocolate-brown);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #FFD700;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .slider {
+        max-width: 100%;
+    }
+
+    main {
+        padding: 1rem;
+    }
+}
